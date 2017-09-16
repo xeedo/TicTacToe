@@ -1,0 +1,31 @@
+div.row
+{
+  display: block;
+  width: 90%;
+  margin: auto;
+}
+
+div.col
+{
+  display: inline-block;
+  width: 30%;
+  height: 200px;
+}
+
+#one
+{
+  border-style: solid;
+  border-width: 0px 5px 5px 0px;
+}
+
+#two
+{
+  border-style: solid;
+  border-width: 0px 5px 5px 5px;
+}
+
+#three
+{
+  border-style: solid;
+  border-width: 0px 0px 5px 5px;
+}
