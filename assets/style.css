@@ -1,31 +1,14 @@
-div.row
+table
 {
-  display: block;
-  width: 90%;
   margin: auto;
+  width: 90%;
+  max-width: 360px;
 }
 
-div.col
+th
 {
-  display: inline-block;
+  border-style: solid;
   width: 30%;
-  height: 200px;
-}
-
-#one
-{
-  border-style: solid;
-  border-width: 0px 5px 5px 0px;
-}
-
-#two
-{
-  border-style: solid;
-  border-width: 0px 5px 5px 5px;
-}
-
-#three
-{
-  border-style: solid;
-  border-width: 0px 0px 5px 5px;
+  height: 110px;
+  font-size: 4.5em;
 }
