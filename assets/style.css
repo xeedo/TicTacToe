@@ -12,3 +12,7 @@ th
   height: 110px;
   font-size: 4.5em;
 }
+
+p {
+  text-align: center;
+}
