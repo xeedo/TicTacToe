@@ -26,7 +26,7 @@ function toggle(event) {
 
   // Check if game is over
   if (isGameOver()) {
-    document.getElementById("demo").innerHTML = playerTurn + " has won!";
+    document.getElementById("demo").innerHTML = "Player " + playerTurn + " has won!";
     document.getElementById("resetBTN").style.display = "block";
   }
 
@@ -44,9 +44,13 @@ function makeMove(cell) {
 function changePlayer() {
   if (playerTurn == "X") {
     playerTurn = "O";
+    document.getElementById("Player2").style.textShadow = "2px 2px 8px green";
+    document.getElementById("Player1").style.textShadow = "none";
   }
   else {
     playerTurn = "X";
+    document.getElementById("Player2").style.textShadow = "none";
+    document.getElementById("Player1").style.textShadow = "2px 2px 8px green";
   }
 }
 

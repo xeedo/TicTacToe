@@ -13,11 +13,29 @@ th
   font-size: 4.5em;
 }
 
-p {
+p
+{
   text-align: center;
 }
 
-#resetBTN {
+div#players
+{
+  text-align: center;
+}
+
+p.playerName
+{
+  display: inline-block;
+  margin: 20px 25px;
+}
+
+p#Player1
+{
+  text-shadow: 2px 2px 8px green; 
+}
+
+#resetBTN
+{
   display: none;
   margin: 10px auto;
 }
