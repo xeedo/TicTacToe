@@ -27,7 +27,7 @@ function toggle(event) {
   // Check if game is over
   if (isGameOver()) {
     document.getElementById("demo").innerHTML = playerTurn + " has won!";
-    resetGame(); 
+    document.getElementById("resetBTN").style.display = "block";
   }
 
   changePlayer();
@@ -102,4 +102,13 @@ function resetGame() {
   for (cell of document.getElementsByTagName("TH")) {
     cell.innerHTML = "";
   }
+
+  for (var cell in currentState) {
+    if (currentState.hasOwnProperty(cell)) {
+      currentState[cell] = "";
+    }
+  }
+
+  document.getElementById("demo").innerHTML = "";
+  document.getElementById("resetBTN").style.display = "none";
 }

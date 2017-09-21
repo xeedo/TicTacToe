@@ -16,3 +16,8 @@ th
 p {
   text-align: center;
 }
+
+#resetBTN {
+  display: none;
+  margin: 10px auto;
+}
