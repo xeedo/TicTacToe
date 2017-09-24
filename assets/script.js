@@ -35,6 +35,7 @@ var winStates = {
 function toggle(event) {
   var cell = event.target;
 
+<<<<<<< HEAD
   // Make make move on an empty cell
   if (cell.tagName == "TH" && cell.innerHTML == "") {
     makeMove(cell);
@@ -64,6 +65,28 @@ function toggle(event) {
     document.getElementById("resetBTN").style.display = "block";
     document.getElementById("gameBoard").onclick = "none";
   }
+=======
+  // Make sure that trigers only on empty cell
+  if (cell.tagName == "TH" && cell.innerHTML == "") {
+    makeMove(cell);
+    changePlayer();
+  }
+
+  // Make CPU move
+  if (true) {
+    makeMove(CPUmove());
+    changePlayer();
+  }
+
+  currentMove += 1;
+
+  // Check if game is over
+  if (isGameOver()) {
+    document.getElementById("demo").innerHTML = "Player " + currentPlayer + " has won!";
+    document.getElementById("resetBTN").style.display = "block";
+    document.getElementById("gameBoard").onclick = "none";
+  }
+>>>>>>> 0b709a1778f2ff56de3e2997c89c6be696858e5c
 }
 
 // Supporting functions
@@ -139,11 +162,19 @@ function resetGame() {
   document.getElementById("demo").innerHTML = "";
   document.getElementById("resetBTN").style.display = "none";
   document.getElementById("gameBoard").onclick = function(){toggle(event)};
+<<<<<<< HEAD
   currentMove = 1;
+=======
+>>>>>>> 0b709a1778f2ff56de3e2997c89c6be696858e5c
 }
 
 // CPU logic
 
+<<<<<<< HEAD
+=======
+// TO-DO: Add more logic
+
+>>>>>>> 0b709a1778f2ff56de3e2997c89c6be696858e5c
 function CPUmove() {
     if (currentMove == 1) {
 
@@ -157,6 +188,7 @@ function CPUmove() {
     }
 
     if (currentMove == 2) {
+<<<<<<< HEAD
       return hasTwo();
     }
 
@@ -186,4 +218,12 @@ function hasTwo() {
   }
 
   return whereMove;
+=======
+
+    }
+
+    if (currentMove >= 3) {
+
+    }
+>>>>>>> 0b709a1778f2ff56de3e2997c89c6be696858e5c
 }
