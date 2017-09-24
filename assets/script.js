@@ -65,27 +65,6 @@ function toggle(event) {
     document.getElementById("gameBoard").onclick = "none";
   }
 
-  // Make sure that trigers only on empty cell
-  if (cell.tagName == "TH" && cell.innerHTML == "") {
-    makeMove(cell);
-    changePlayer();
-  }
-
-  // Make CPU move
-  if (true) {
-    makeMove(CPUmove());
-    changePlayer();
-  }
-
-  currentMove += 1;
-
-  // Check if game is over
-  if (isGameOver()) {
-    document.getElementById("demo").innerHTML = "Player " + currentPlayer + " has won!";
-    document.getElementById("resetBTN").style.display = "block";
-    document.getElementById("gameBoard").onclick = "none";
-  }
-
 }
 
 // Supporting functions
@@ -163,31 +142,29 @@ function resetGame() {
   document.getElementById("gameBoard").onclick = function(){toggle(event)};
 
   currentMove = 1;
-
-
 }
 
 // CPU logic
 
 function CPUmove() {
-    if (currentMove == 1) {
+  if (currentMove == 1) {
 
-      if (currentState["five"] == player) {
-        return document.getElementById("one");
-      }
-      else {
-        return document.getElementById("five");
-      }
-
+    if (currentState["five"] == player) {
+      return document.getElementById("one");
+    }
+    else {
+      return document.getElementById("five");
     }
 
-    if (currentMove == 2) {
-      return hasTwo();
-    }
+  }
 
-    if (currentMove >= 3) {
-      return hasTwo();
-    }
+  if (currentMove == 2) {
+    return hasTwo();
+  }
+
+  if (currentMove >= 3) {
+    return hasTwo();
+  }
 }
 
 function hasTwo() {
