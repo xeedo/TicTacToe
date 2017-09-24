@@ -64,6 +64,28 @@ function toggle(event) {
     document.getElementById("resetBTN").style.display = "block";
     document.getElementById("gameBoard").onclick = "none";
   }
+
+  // Make sure that trigers only on empty cell
+  if (cell.tagName == "TH" && cell.innerHTML == "") {
+    makeMove(cell);
+    changePlayer();
+  }
+
+  // Make CPU move
+  if (true) {
+    makeMove(CPUmove());
+    changePlayer();
+  }
+
+  currentMove += 1;
+
+  // Check if game is over
+  if (isGameOver()) {
+    document.getElementById("demo").innerHTML = "Player " + currentPlayer + " has won!";
+    document.getElementById("resetBTN").style.display = "block";
+    document.getElementById("gameBoard").onclick = "none";
+  }
+
 }
 
 // Supporting functions
@@ -139,7 +161,10 @@ function resetGame() {
   document.getElementById("demo").innerHTML = "";
   document.getElementById("resetBTN").style.display = "none";
   document.getElementById("gameBoard").onclick = function(){toggle(event)};
+
   currentMove = 1;
+
+
 }
 
 // CPU logic
