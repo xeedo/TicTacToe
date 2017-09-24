@@ -185,5 +185,9 @@ function hasTwo() {
     }
   }
 
+  if (states == "") {
+    console.log("dunno");
+  }
+
   return whereMove;
 }
