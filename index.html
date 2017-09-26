@@ -9,7 +9,20 @@
 </head>
 
 <body>
-  <!-- Add form to select player sign -->
+  <!-- TO-DO: Add form to select player sign -->
+  <div id="setup" onclick="gameType(event)">
+    <h1>Welcome to Tic Tac Toe game!</h1>
+    <h2>Please select game type</h2>
+    <button type="button" id="1-player" onclick="">1-player</button>
+    <button type="button" id="2-player" onclick="">2-player</button>
+  </div>
+
+  <div id="symbol" onclick="selectSymbol(event)">
+    <h1>Select your symbol</h1>
+    <button type="button" id="symbol_X" onclick="">X</button>
+    <button type="button" id="symbol_O" onclick="">O</button>
+  </div>
+
   <table onclick="toggle(event)" id="gameBoard">
     <tr>
       <th style="border-width: 0px 1px 1px 0px" id="one"></th>

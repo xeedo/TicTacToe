@@ -1,3 +1,7 @@
+body
+{
+  text-align: center;
+}
 table
 {
   margin: auto;
@@ -13,14 +17,16 @@ th
   font-size: 4.5em;
 }
 
-p
+div
 {
-  text-align: center;
+  width: 90%;
+  max-width: 360px;
+  margin: auto;
 }
 
-div#players
+#symbol, #players, #gameBoard
 {
-  text-align: center;
+  display: none;
 }
 
 p.playerName
@@ -31,7 +37,7 @@ p.playerName
 
 p#Player1
 {
-  text-shadow: 2px 2px 8px green; 
+  text-shadow: 2px 2px 8px green;
 }
 
 #resetBTN
